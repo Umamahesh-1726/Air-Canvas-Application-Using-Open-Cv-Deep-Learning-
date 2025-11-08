@@ -1,0 +1,15 @@
+# Ignore Python virtual environments
+newenv/
+venv/
+env/
+
+# Ignore model files and large data
+*.h5
+*.dll
+*.pyd
+
+# Ignore temporary or system files
+__pycache__/
+*.log
+*.tmp
+*.bak
