@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Hands } from '@mediapipe/hands';
 import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
 import * as cam from '@mediapipe/camera_utils';
+import { HAND_CONNECTIONS } from "@mediapipe/hands";
 
 const GestureRecognizer: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -44,10 +45,10 @@ const GestureRecognizer: React.FC = () => {
         ctx.save();
         ctx.translate(canvasElement.width, 0);
         ctx.scale(-1, 1);
-        drawConnectors(ctx, landmarks, Hands.HAND_CONNECTIONS, {
-          color: '#00FF00',
-          lineWidth: 2,
-        });
+        drawConnectors(ctx, landmarks, HAND_CONNECTIONS, {
+            color: "#00FF00",
+             lineWidth: 3
+          });
         drawLandmarks(ctx, landmarks, { color: '#FF0000', lineWidth: 1 });
         ctx.restore();
 

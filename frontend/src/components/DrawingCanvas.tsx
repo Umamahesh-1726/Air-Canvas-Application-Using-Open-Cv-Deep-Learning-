@@ -1,12 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Paintbrush, Trash2, Undo2, Save } from "lucide-react";
 
 const DrawingCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [currentColor, setCurrentColor] = useState("red");
-  const [gesture, setGesture] = useState("none");
-  const [connected, setConnected] = useState(false);
+  const [gesture] = useState("none");
+  const [connected] = useState(false);
 
   // ---- Canvas Drawing Logic ----
   const startDrawing = (e: React.MouseEvent) => {

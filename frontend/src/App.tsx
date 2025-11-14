@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WelcomePage from "./components/WelcomePage";
-import Sheet from "./components/Sheet";
+import Sheet from "./components/sheet";
 import Gallery from "./components/Gallery";
 
 const App: React.FC = () => {
